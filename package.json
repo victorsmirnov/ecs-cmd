@@ -1,0 +1,48 @@
+{
+  "author": "Victor Smirnov <admin@victorsmirnov.blog> (victorsmirnov.blog)",
+  "bin": {
+    "esc-cmd": "./dist/esc-cmd.js"
+  },
+  "bugs": "https://github.com/victorsmirnov/ecs-cmd/issues",
+  "dependencies": {
+    "@aws-sdk/client-ecs": "^3.312.0",
+    "chalk": "^5.2.0",
+    "inquirer": "^9.1.5"
+  },
+  "description": "Connect to the AWS ECS task Docker container.",
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.15.11",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "rimraf": "^5.0.0",
+    "snazzy": "^9.0.0",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/victorsmirnov/ecs-cmd",
+  "keywords": [
+    "aws",
+    "ecs",
+    "docker",
+    "task",
+    "container"
+  ],
+  "license": "ISC",
+  "main": "./dist/esc-cmd.js",
+  "name": "ecs-cmd",
+  "scripts": {
+    "build": "tsc",
+    "format": "ts-standard --fix --verbose | snazzy",
+    "prepare": "husky install",
+    "test": "ts-standard --verbose | snazzy"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
