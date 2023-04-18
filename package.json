@@ -5,14 +5,15 @@
   },
   "bugs": "https://github.com/victorsmirnov/ecs-cmd/issues",
   "dependencies": {
-    "@aws-sdk/client-ecs": "^3.312.0",
-    "chalk": "^5.2.0",
-    "inquirer": "^9.1.5"
+    "@aws-sdk/client-ecs": "^3.315.0",
+    "inquirer": "^9.1.5",
+    "update-notifier": "^6.0.2"
   },
   "description": "Connect to the AWS ECS task Docker container.",
   "devDependencies": {
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.15.11",
+    "@types/update-notifier": "^6.0.2",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "rimraf": "^5.0.0",
@@ -39,8 +40,10 @@
   "name": "ecs-cmd",
   "scripts": {
     "build": "tsc",
+    "clean": "rimraf dist",
     "format": "ts-standard --fix --verbose | snazzy",
     "prepare": "husky install",
+    "prepublishOnly": "npm run clean && npm run build",
     "test": "ts-standard --verbose | snazzy"
   },
   "type": "module",

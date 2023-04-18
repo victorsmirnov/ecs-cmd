@@ -1,3 +1,5 @@
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 # ecs-cmd
 
 **ecs-cmd executes a command in the AWS ECS container.**

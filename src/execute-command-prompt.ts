@@ -1,8 +1,9 @@
-import { Cluster, Container, ECSClient, Service, Task } from '@aws-sdk/client-ecs'
+import type { Cluster, Container, Service, Task } from '@aws-sdk/client-ecs'
+import type { ListChoiceOptions, QuestionCollection } from 'inquirer'
+import { ECSClient } from '@aws-sdk/client-ecs'
 import { fetchClusters } from './fetch-clusters.js'
 import { fetchServices } from './fetch-services.js'
 import { fetchTasks } from './fetch-tasks.js'
-import { ListChoiceOptions, QuestionCollection } from 'inquirer'
 
 export interface ExecuteCommandAnswers {
   readonly region?: string
